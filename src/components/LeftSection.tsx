@@ -29,14 +29,14 @@ const LeftSection = () => {
     let localRenderArray: Array<JSX.Element> = []
   
     colorList.forEach(item => {
-      if (item.name !== 'Black') {
+      if (item.Name !== 'Black') {
         localRenderArray.push(
           <div
-            key={item._id}
+            key={item.Id}
             className='colorLabel'
             onClick={(e) => handleSelectColor(e, item)}
           >
-            <h3>{item.name}</h3>
+            <h3>{item.Name}</h3>
           </div>
         )
       }

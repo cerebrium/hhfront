@@ -79,6 +79,25 @@ body, html {
 	"leftSelectionContainer mainContentContainer"
 	;
 
+	// loading screen
+	.loader {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+
+		h2 {
+			
+		}
+		svg{
+
+			width: 100px;
+			height: 100px;
+			margin: 20px;
+			display: inline-block;
+		}
+	}
+
 	// header/nav/search bar
 	.headerContainer {
 		grid-area: headerContainer;
@@ -151,6 +170,9 @@ body, html {
 				font-weight: 400;
 				cursor: pointer;
 			}
+			.colorLabel:hover {
+				color: #545757;
+			}
 		}
 
 		button {
@@ -182,11 +204,54 @@ body, html {
 		.mainBoxContainer {
 			min-height: 400px;
 			display: flex;
+			justify-content: flex-start;
 			position: relative;
-			justify-content: center;
 			overflow-y: auto;
 			max-height: 81vh;
 			margin-top: 0px;
+			
+
+			// multicheck
+			.multicheckContainer {
+				width: 300px;
+				height: 100px;
+				background-color: #363C3C;
+				margin-top: 10px;
+				padding: 0px;
+				border-radius: .5rem;
+				box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+				
+				.formDiv {
+					display: flex;
+					padding: 10px;
+					justify-content: space-evenly;
+					label {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						color:rgb(214, 214, 214);
+
+						input {
+							cursor: pointer;
+						}
+					}
+				}
+				
+				button {
+					display: block;
+					background-color: rgb(214, 214, 214);
+					border: none;
+					border-radius: .2rem;
+					margin: 10px auto;
+					padding: 5px;
+					width: 100px;
+					height: 30px;
+					cursor: pointer;
+				}
+				button:hover {
+					background-color: rgb(205, 205, 205);
+				}
+			}
 
 			// x button
 			.toggleMenuContainer {
@@ -312,6 +377,7 @@ body, html {
 				} 
 				100% {
 					height: 175px;
+					box-shadow: 1px 1px 5px #363C3C;
 				}
 			}
 
@@ -332,7 +398,7 @@ body, html {
 				padding: 5px;
 				right: 1%;
 				top: 10px;
-				background-color: #363C3C;
+				background: rgb(54,60,60);
 				border-bottom-left-radius: .5rem;
 				border-bottom-right-radius: .5rem;
 				animation: menuAppearAffect .2s linear forwards;
@@ -353,6 +419,9 @@ body, html {
 					h4 {
 						margin: 3px 0px 2px 5px;
 						cursor: pointer;
+					}
+					h4:hover {
+						color:rgb(230, 230, 230)
 					}
 				}
 

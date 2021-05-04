@@ -36,11 +36,12 @@ const Header = () => {
   // make the dropdown with recommendations
   useEffect(() => {
     if (inputValue.length > 0) {
+      // eslint-disable-next-line array-callback-return
       let matchingColorsList = colorList.map((color, colorId) => {
-        if (color.name.toLowerCase().includes(inputValue.toLowerCase())) {
+        if (color.Name.toLowerCase().includes(inputValue.toLowerCase())) {
           return (
-            <h3 onClick={(e) => handleSelectColor(e, color)}>
-              {color.name}
+            <h3 key={colorId} onClick={(e) => handleSelectColor(e, color)}>
+              {color.Name}
             </h3>
           )
         }

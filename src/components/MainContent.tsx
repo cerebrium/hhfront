@@ -47,70 +47,71 @@ const MainContent = () => {
       return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
     }
     let amountOfData = 0
+
     if (mainColor !== null) {
       setColorBox(
         // main color box
         <div className='bigColorContainer'>
           <div
             style={{
-              backgroundColor: `${mainColor.color}`
+              backgroundColor: `${mainColor.Color}`
             }}
             className='mainColorBox'
           >
             <div className='mainColorBoxLabel'>
-              <h3>{mainColor.name}</h3>
+              <h3>{mainColor.Name}</h3>
             </div>
           </div>
           {/* build the variety of colors based off averaging closer to the 0 or 255 rbg. apply to all. middle is the main color. convert name to hex as per the picture  */}
           <div className='varietyColorsContainer'>
             <div
               style={{
-                backgroundColor: `rgb(${mainColor.red > 0 ? mainColor.red/3 : mainColor.red}, ${mainColor.green > 0 ? mainColor.green/3 : mainColor.green}, ${mainColor.blue > 0 ? mainColor.blue/3 : mainColor.blue})`
+                backgroundColor: `rgb(${mainColor.Red > 0 ? mainColor.Red/3 : mainColor.Red}, ${mainColor.Green > 0 ? mainColor.Green/3 : mainColor.Green}, ${mainColor.Blue > 0 ? mainColor.Blue/3 : mainColor.Blue})`
               }}
               className='mainColorBoxMini'
             >
               <div className='miniLabelBox'>
-                {rgbToHex(mainColor.red > 0 ? Math.floor(mainColor.red/3) : mainColor.red, mainColor.green > 0 ? Math.floor(mainColor.green/3) : mainColor.green, mainColor.blue > 0 ? Math.floor(mainColor.blue/3) : mainColor.blue)}
+                {rgbToHex(mainColor.Red > 0 ? Math.floor(mainColor.Red/3) : mainColor.Red, mainColor.Green > 0 ? Math.floor(mainColor.Green/3) : mainColor.Green, mainColor.Blue > 0 ? Math.floor(mainColor.Blue/3) : mainColor.Blue)}
               </div>
             </div>
             <div
               style={{
-                backgroundColor: `rgb(${mainColor.red > 0 ? mainColor.red/2 : mainColor.red}, ${mainColor.green > 0 ? mainColor.green/2 : mainColor.green}, ${mainColor.blue > 0 ? mainColor.blue/2 : mainColor.blue})`
+                backgroundColor: `rgb(${mainColor.Red > 0 ? mainColor.Red/2 : mainColor.Red}, ${mainColor.Green > 0 ? mainColor.Green/2 : mainColor.Green}, ${mainColor.Blue > 0 ? mainColor.Blue/2 : mainColor.Blue})`
               }}
               className='mainColorBoxMini'
             >
               <div className='miniLabelBox'>
-                {rgbToHex(mainColor.red > 0 ? Math.floor(mainColor.red/2) : mainColor.red, mainColor.green > 0 ? Math.floor(mainColor.green/2) : mainColor.green, mainColor.blue > 0 ? Math.floor(mainColor.blue/2) : mainColor.blue)}
+                {rgbToHex(mainColor.Red > 0 ? Math.floor(mainColor.Red/2) : mainColor.Red, mainColor.Green > 0 ? Math.floor(mainColor.Green/2) : mainColor.Green, mainColor.Blue > 0 ? Math.floor(mainColor.Blue/2) : mainColor.Blue)}
               </div>
             </div>
             <div
               style={{
-                backgroundColor: `rgb(${mainColor.red}, ${mainColor.green}, ${mainColor.blue})`
+                backgroundColor: `rgb(${mainColor.Red}, ${mainColor.Green}, ${mainColor.Blue})`
               }}
               className='mainColorBoxMini'
             >
               <div className='miniLabelBox'>
-              {rgbToHex(mainColor.red, mainColor.green, mainColor.blue)}
+              {rgbToHex(mainColor.Red, mainColor.Green, mainColor.Blue)}
               </div>
             </div>
             <div
               style={{
-                backgroundColor: `rgb(${mainColor.red < 255 ? (mainColor.red + 255)/2 : mainColor.red}, ${mainColor.green < 255 ? (mainColor.green + 255)/2 : mainColor.green}, ${mainColor.blue < 255 ? (mainColor.blue + 255)/2 : mainColor.blue})`
+                backgroundColor: `rgb(${mainColor.Red < 255 ? (mainColor.Red + 255)/2 : mainColor.Red}, ${mainColor.Green < 255 ? (mainColor.Green + 255)/2 : mainColor.Green}, ${mainColor.Blue < 255 ? (mainColor.Blue + 255)/2 : mainColor.Blue})`
               }}
               className='mainColorBoxMini'
             >
               <div className='miniLabelBox'>
-                {rgbToHex(mainColor.red > 0 ? Math.floor((mainColor.red+255)/2) : mainColor.red, mainColor.green > 0 ? Math.floor((mainColor.green+255)/2) : mainColor.green, mainColor.blue > 0 ? Math.floor((mainColor.blue+255)/2) : mainColor.blue)}
+                {rgbToHex(mainColor.Red > 0 ? Math.floor((mainColor.Red+255)/2) : mainColor.Red, mainColor.Green > 0 ? Math.floor((mainColor.Green+255)/2) : mainColor.Green, mainColor.Blue > 0 ? Math.floor((mainColor.Blue+255)/2) : mainColor.Blue)}
               </div>
             </div>
             <div
               style={{
-                backgroundColor: `rgb(${mainColor.red < 255 ? ((mainColor.red + 255)/2 + 255)/2 : mainColor.red}, ${mainColor.green < 255 ? ((mainColor.green + 255)/2 + 255)/2: mainColor.green}, ${mainColor.blue < 255 ? ((mainColor.blue + 255)/2 + 255)/2 : mainColor.blue})`
+                backgroundColor: `rgb(${mainColor.Red < 255 ? ((mainColor.Red + 255)/2 + 255)/2 : mainColor.Red}, ${mainColor.Green < 255 ? ((mainColor.Green + 255)/2 + 255)/2: mainColor.Green}, ${mainColor.Blue < 255 ? ((mainColor.Blue + 255)/2 + 255)/2 : mainColor.Blue})`
               }}
               className='mainColorBoxMini'
             >
               <div className='miniLabelBox'>
-                {rgbToHex(mainColor.red > 0 ? Math.floor(((mainColor.red + 255)/2 + 255)/2) : mainColor.red, mainColor.green > 0 ? Math.floor(((mainColor.green + 255)/2 + 255)/2) : mainColor.green, mainColor.blue > 0 ? Math.floor(((mainColor.blue + 255)/2 + 255)/2) : mainColor.blue)}
+                {rgbToHex(mainColor.Red > 0 ? Math.floor(((mainColor.Red + 255)/2 + 255)/2) : mainColor.Red, mainColor.Green > 0 ? Math.floor(((mainColor.Green + 255)/2 + 255)/2) : mainColor.Green, mainColor.Blue > 0 ? Math.floor(((mainColor.Blue + 255)/2 + 255)/2) : mainColor.Blue)}
               </div>
             </div>
           </div>
@@ -129,14 +130,14 @@ const MainContent = () => {
           return (
             <div
               style={{
-                backgroundColor: `${item.color}`
+                backgroundColor: `${item.Color}`
               }}
               className='smallColorBox'
               key={itemId}
               onClick={(e) => handleSelectColor(e, item)}
             >
               <div className='smallColorBoxLabel'>
-                <h3>{item.name}</h3>
+                <h3>{item.Name}</h3>
               </div>
             </div>
           )
@@ -175,6 +176,10 @@ const MainContent = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mainColor, colorList, currentPage])
 
+  useEffect(() => {
+    console.log("main color: ", mainColor)
+  }, [mainColor, colorList])
+
   // function to remove selected color
   const handleRemoveSelectedColor = () => {
     dispatch(selectColor(null))
@@ -195,37 +200,37 @@ const MainContent = () => {
     })
     switch (sortLabel) {
       case "Hue":
-        let hueList = localSortableList.sort((a, b) => (a.hue > b.hue ? -1 : 1))
+        let hueList = localSortableList.sort((a, b) => (a.Hue > b.Hue ? -1 : 1))
         dispatch(addColors(hueList))
         setSortMenuBoolean(false)
         break;
       case "Saturation":
-        let satList = localSortableList.sort((a, b) => (a.sat > b.sat ? -1 : 1))
+        let satList = localSortableList.sort((a, b) => (a.Sat > b.Sat ? -1 : 1))
         dispatch(addColors(satList))
         setSortMenuBoolean(false)
         break;
       case "Luma":
-        let lumaList = localSortableList.sort((a, b) => (a.luma > b.luma ? -1 : 1))
+        let lumaList = localSortableList.sort((a, b) => (a.Luma > b.Luma ? -1 : 1))
         dispatch(addColors(lumaList))
         setSortMenuBoolean(false)
         break;
       case "Red":
-        let redList = localSortableList.sort((a, b) => (a.red > b.red ? -1 : 1))
+        let redList = localSortableList.sort((a, b) => (a.Red > b.Red ? -1 : 1))
         dispatch(addColors(redList))
         setSortMenuBoolean(false)
         break;
       case "Green":
-        let greenList = localSortableList.sort((a, b) => (a.green > b.green ? -1 : 1))
+        let greenList = localSortableList.sort((a, b) => (a.Green > b.Green ? -1 : 1))
         dispatch(addColors(greenList))
         setSortMenuBoolean(false)
         break;
       case "Blue":
-        let blueList = localSortableList.sort((a, b) => (a.blue > b.blue ? -1 : 1))
+        let blueList = localSortableList.sort((a, b) => (a.Blue > b.Blue ? -1 : 1))
         dispatch(addColors(blueList))
         setSortMenuBoolean(false)
         break;
       case "Alphabetical":
-        let alphaList = localSortableList.sort((a, b) => (a.name > b.name ? 1 : -1))
+        let alphaList = localSortableList.sort((a, b) => (a.Name > b.Name ? 1 : -1))
         dispatch(addColors(alphaList))
         setSortMenuBoolean(false)
         break;

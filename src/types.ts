@@ -5,15 +5,25 @@ export interface ColorType {
 }
 
 export interface ColorObject {
-  _id: string,
-  name: string,
-  color: string,
-  chroma: number,
-  hue: number,
-  sat: number,
-  val: number,
-  luma: number,
-  red: number,
-  green: number,
-  blue: number
+  Id: string,
+  Name: string,
+  Color: string,
+  Chroma: number,
+  Hue: number,
+  Sat: number,
+  Val: number,
+  Luma: number,
+  Red: number,
+  Green: number,
+  Blue: number
+}
+
+export interface RomanObject {
+  I: number
+  V: number
+  X: number
+  L: number
+  C: number
+  D: number
+  M: number
 }
